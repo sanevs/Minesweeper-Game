@@ -1,0 +1,38 @@
+﻿<Window x:Class="Minesweeper.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minesweeper"
+        mc:Ignorable="d"
+        Title="О программе" Height="500" Width="300">
+    <FlowDocumentReader>
+        <FlowDocument>
+            <BlockUIContainer>
+                <Image Source="win10.jpg" Opacity="0.8"></Image>
+            </BlockUIContainer>
+            <Paragraph FontSize="10">
+                <Floater Width="50" HorizontalAlignment="Left">
+                    <BlockUIContainer>
+                        <Image Source="mine.png" Width="30"></Image>
+                    </BlockUIContainer>
+                </Floater>
+                Microsoft Windows
+                <LineBreak/>
+                Version 6.1 (Build 7601: Service Pack 1)
+                <LineBreak/>
+                Copyright © 2020 Microsoft Corporation. All right reserved.
+            </Paragraph>
+            <Paragraph FontSize="12">
+                Истоки Сапёра берут свое начало в 1960-х годах. Игра стала популярна благодаря включению 
+                ее в качестве стандартного элемента операционной системы Windows.
+            </Paragraph>
+            <Paragraph>
+                <Hyperlink Click="Hyperlink_Click">http://сапёр.com</Hyperlink>
+                <LineBreak/>
+                <LineBreak/>
+                <Button Width="100" Click="Button_Click">OK</Button>
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentReader>
+</Window>

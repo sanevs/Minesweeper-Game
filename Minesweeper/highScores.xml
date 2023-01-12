@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scores>
+  <difficulty name="Difficulty: easy">
+    <score>
+      <name>Ivan</name>
+      <duration>152</duration>
+      <dateTime>04.05.2020 13:55:34</dateTime>
+    </score>
+  </difficulty>
+  <difficulty name="Difficulty: medium">
+    <score>
+      <name>Anna</name>
+      <duration>113</duration>
+      <dateTime>02.05.2020 17:32:29</dateTime>
+    </score>
+  </difficulty>
+  <difficulty name="Difficulty: hard">
+    <score>
+      <name>John</name>
+      <duration>182</duration>
+      <dateTime>03.05.2020 18:17:38</dateTime>
+    </score>
+  </difficulty>
+</scores>

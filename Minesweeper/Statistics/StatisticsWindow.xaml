@@ -1,0 +1,31 @@
+﻿<Window x:Class="Minesweeper.StatisticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minesweeper"
+        mc:Ignorable="d"
+        Title="High Scores" Height="300" Width="300">
+    <Window.Resources>
+        <XmlDataProvider x:Key="provider" Source="highScores.xml"/>
+    </Window.Resources>
+    <Grid>
+        <TreeView ItemsSource="{Binding Source={StaticResource provider}, XPath=scores}">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="scores" ItemsSource="{Binding XPath=difficulty}">
+                    <TextBlock Text="Scores"/>
+                </HierarchicalDataTemplate>
+                <HierarchicalDataTemplate DataType="difficulty" ItemsSource="{Binding XPath=score}">
+                    <TextBlock Text="{Binding XPath=@name}"/>
+                </HierarchicalDataTemplate>
+                <HierarchicalDataTemplate DataType="score">
+                    <StackPanel>
+                        <TextBlock Text="{Binding XPath=name}"/>
+                        <TextBlock Text="{Binding XPath=duration}"/>
+                        <TextBlock Text="{Binding XPath=dateTime}"/>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </Grid>
+</Window>
